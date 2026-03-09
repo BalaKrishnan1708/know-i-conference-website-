@@ -146,11 +146,14 @@ const Hero = () => {
           font-family: var(--font-heading);
           line-height: 0.9;
           margin-bottom: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
 
         .title-top {
           display: block;
-          font-size: clamp(1.5rem, 4vw, 3rem);
+          font-size: clamp(1.2rem, 3vw, 2.5rem);
           font-weight: 300;
           letter-spacing: 0.3em;
           color: var(--text-secondary);
@@ -259,7 +262,7 @@ const Hero = () => {
         }
 
         @media (max-width: 480px) {
-          .title-focus { font-size: 3.5rem; }
+          .title-focus { font-size: 3.2rem; }
           .hero-main-title { margin-bottom: 1.5rem; }
         }
       `}</style>
