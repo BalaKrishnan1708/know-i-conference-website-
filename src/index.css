@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --neon-pink: #ff0080;
+  --neon-blue: #00eaff;
+  --neon-purple: #7a00ff;
+  --neon-lime: #b3ff00;
+  --dark-bg: #020205;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Gradient backgrounds */
+.bg-gradient-mesh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: 
+    radial-gradient(circle at 10% 10%, rgba(255, 0, 128, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(0, 234, 255, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(122, 0, 255, 0.1) 0%, transparent 60%);
+  filter: blur(80px);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+  width: 100%;
+}
+
+/* Professional Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+}
+
+.text-glow-pink { text-shadow: 0 0 20px rgba(255, 0, 128, 0.4); }
+.text-glow-blue { text-shadow: 0 0 20px rgba(0, 234, 255, 0.4); }
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue), var(--neon-lime));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+/* Custom Cursor or Interactive Elements */
+.btn-modern {
+  position: relative;
+  padding: 1rem 2.5rem;
+  border-radius: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-expo);
+  border: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: var(--dark-bg);
+}
+
+.btn-primary:hover {
+  background: var(--neon-blue);
+  box-shadow: 0 0 30px rgba(0, 234, 255, 0.5);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 80px 0;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-blue);
+}
