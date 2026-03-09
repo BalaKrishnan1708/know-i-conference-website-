@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="container">
         <div className="contact-wrap glass-panel">
           <div className="contact-header">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -22,11 +22,11 @@ const Contact = () => {
           </div>
 
           <div className="contact-channels">
-            <motion.div 
-               initial={{ opacity: 0, y: 20 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               className="channel-card"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="channel-card"
             >
               <div className="channel-icon bg-pink"><Mail size={30} /></div>
               <div className="channel-info">
@@ -36,27 +36,27 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            <motion.div 
-               initial={{ opacity: 0, y: 20 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               transition={{ delay: 0.1 }}
-               className="channel-card"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="channel-card"
             >
               <div className="channel-icon bg-blue"><Phone size={30} /></div>
               <div className="channel-info">
                 <h4>HOTLINE</h4>
-                <p>044-27152000 (EXT 300)</p>
-                <a href="tel:04427152000" className="channel-link">CALL NOW <ExternalLink size={14} /></a>
+                <p>+91 9941112928</p>
+                <a href="tel:+919941112928" className="channel-link">CALL NOW <ExternalLink size={14} /></a>
               </div>
             </motion.div>
 
-            <motion.div 
-               initial={{ opacity: 0, y: 20 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               transition={{ delay: 0.2 }}
-               className="channel-card"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="channel-card"
             >
               <div className="channel-icon bg-purple"><MapPin size={30} /></div>
               <div className="channel-info">

@@ -9,13 +9,10 @@ const Footer = () => {
         <div className="footer-main">
           <div className="footer-brand-hub">
             <Link to="hero" smooth={true} className="footer-logo">
-              <div className="logo-icon-wrap">
-                <Globe size={24} />
-              </div>
-              <span className="logo-text">ICICRCET<span className="dot">.</span>'26</span>
+              <img src="/logo.png" alt="ICICRCET'26 Logo" className="logo-img-footer" />
             </Link>
             <p className="footer-tagline">
-              2nd International Conference on Innovative Computing Research and Cutting Edge Technologies. Catalyzing global research through elite academic collaboration.
+              2nd International Conference on Innovative Computing, Research and Cutting Edge Technologies. Catalyzing global research through elite academic collaboration.
             </p>
             <div className="social-rack">
               <a href="#" className="soc-link pink"><Facebook size={20} /></a>
@@ -33,7 +30,7 @@ const Footer = () => {
               <Link to="dates" smooth={true}>Deadlines</Link>
               <Link to="committee" smooth={true}>Leadership</Link>
             </div>
-            
+
             <div className="info-col address-col">
               <h5>VENUE</h5>
               <p>SRI VENKATESWARA COLLEGE OF ENGINEERING</p>
@@ -70,31 +67,15 @@ const Footer = () => {
         .footer-logo {
           display: flex;
           align-items: center;
-          gap: 1.2rem;
           margin-bottom: 2.5rem;
           cursor: pointer;
         }
 
-        .logo-icon-wrap {
-          width: 50px;
-          height: 50px;
-          background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
-          border-radius: 14px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
+        .logo-img-footer {
+          height: 60px;
+          width: auto;
+          object-fit: contain;
         }
-
-        .logo-text {
-          font-family: var(--font-heading);
-          font-weight: 900;
-          font-size: 1.8rem;
-          letter-spacing: -2px;
-          color: white;
-        }
-
-        .logo-text .dot { color: var(--neon-pink); }
 
         .footer-tagline {
           color: var(--text-secondary);

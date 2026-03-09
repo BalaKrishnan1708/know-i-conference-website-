@@ -31,15 +31,15 @@ const MemberCard = ({ member }) => (
     style={{ '--member-color': member.color }}
   >
     <div className="member-visual">
-       <div className="avatar-frame">
-          <div className="avatar-initials" style={{ background: `linear-gradient(135deg, ${member.color}, #000)` }}>
-            {member.initials}
-          </div>
-          <div className="avatar-ring" style={{ borderColor: member.color }}></div>
-          <div className="verified-badge"><ShieldCheck size={12} /></div>
-       </div>
+      <div className="avatar-frame">
+        <div className="avatar-initials" style={{ background: `linear-gradient(135deg, ${member.color}, #000)` }}>
+          {member.initials}
+        </div>
+        <div className="avatar-ring" style={{ borderColor: member.color }}></div>
+        <div className="verified-badge"><ShieldCheck size={12} /></div>
+      </div>
     </div>
-    
+
     <div className="member-details">
       <div className="member-role-tag" style={{ background: `${member.color}15`, color: member.color }}>
         {member.role}
@@ -48,16 +48,16 @@ const MemberCard = ({ member }) => (
       <div className="member-org-info">
         <span>{member.org}</span>
         <div className="sep-dot"></div>
-        <span>COMPUTER SCIENCE</span>
+        <span>COMPUTER SCIENCE AND ENGINEERING</span>
       </div>
-      
+
       <div className="member-actions">
         <a href="#" className="action-btn"><Linkedin size={16} /></a>
         <a href="#" className="action-btn"><Mail size={16} /></a>
         <a href="#" className="action-btn"><Globe size={16} /></a>
       </div>
     </div>
-    
+
     <div className="card-decor"></div>
   </motion.div>
 );
@@ -77,7 +77,7 @@ const Committee = () => {
               LEADERSHIP <span className="gradient-text">FORCE</span>
             </h2>
             <p className="section-intro">
-               The visionaries and academic leaders steering ICICRCET'26 towards global impact.
+              The visionaries and academic leaders steering ICICRCET'26 towards global impact.
             </p>
           </motion.div>
         </div>

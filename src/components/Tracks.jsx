@@ -1,57 +1,118 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BrainCircuit, Radio, ShieldAlert, Cpu, Layers, CheckCircle2 } from 'lucide-react';
+import { BrainCircuit, Database, Cpu, Network, Bot, Dna, Orbit, Leaf, CheckCircle2 } from 'lucide-react';
 
 const tracks = [
   {
     id: "01",
     icon: <BrainCircuit size={48} />,
-    title: "Computational Intelligence",
+    title: "Artificial Intelligence and Machine Learning",
     color: "#ff0080",
     topics: [
-      "Artificial Intelligence", "Machine Learning", "Deep Learning", 
-      "Natural Language Processing", "Computational Optimization", 
-      "Robotics", "Text Mining", "Web Mining", "Visualization Techniques"
+      "Machine Learning Theory and Algorithms",
+      "Deep Learning and Neural Architectures",
+      "Generative AI and Foundation Models",
+      "Explainable, Trustworthy, and Ethical AI",
+      "Computer Vision and Multimodal Learning",
+      "AI Applications in Science and Industry"
     ]
   },
   {
     id: "02",
-    icon: <Radio size={48} />,
-    title: "Ambient Intelligence",
+    icon: <Database size={48} />,
+    title: "Data Science and Intelligent Systems",
     color: "#00eaff",
     topics: [
-      "Data Science & Analytics", "Smart Cities", "Affective Computing", 
-      "Context Aware Pervasive Systems", "Intelligent Transportation"
+      "Big Data Analytics and Scalable Processing",
+      "Knowledge Representation and Semantic Systems",
+      "Data Engineering and Pipeline Management",
+      "Real-Time and Stream Analytics",
+      "Data Privacy, Governance, and Security",
+      "Decision Support and Intelligent Automation"
     ]
   },
   {
     id: "03",
-    icon: <ShieldAlert size={48} />,
-    title: "Cybsersecurity & Trust",
+    icon: <Cpu size={48} />,
+    title: "High-Performance and Quantum Computing",
     color: "#7a00ff",
     topics: [
-      "Biometrics", "Internet Security", "Cloud Security", 
-      "Secure Transactions", "Advanced Cryptography", "Cyber Security"
+      "Parallel and Distributed Computing",
+      "Cloud, Edge, and Heterogeneous Architectures",
+      "Performance Optimization and Benchmarking",
+      "Quantum Algorithms and Complexity",
+      "Quantum Hardware, Error Correction, and Communication",
+      "Hybrid Quantum-Classical Systems"
     ]
   },
   {
     id: "04",
-    icon: <Cpu size={48} />,
-    title: "Advanced Computing",
+    icon: <Network size={48} />,
+    title: "Networks, Cybersecurity, and Decentralized Systems",
     color: "#b3ff00",
     topics: [
-      "Cloud Computing", "Edge Computing", "Quantum Computing", 
-      "High Performance Computing", "Bio-Inspired Computing", "Human Centered Computing"
+      "Next-Generation Wireless and Network Architectures",
+      "Software-Defined and Virtualized Networking",
+      "Cybersecurity, Cryptography, and Privacy",
+      "Edge and Fog Computing Networks",
+      "Blockchain and Distributed Ledger Technologies",
+      "Decentralized Identity, Governance, and Trust"
     ]
   },
   {
     id: "05",
-    icon: <Layers size={48} />,
-    title: "Next-Gen Technologies",
+    icon: <Bot size={48} />,
+    title: "Cyber-Physical Systems, IoT, and Robotics",
     color: "#ff8c00",
     topics: [
-      "Virtualization Techniques", "Computer Vision", "BCI Interface", 
-      "AR / VR Realities", "Block Chain", "Metaverse"
+      "IoT Architectures and Embedded Systems",
+      "Smart Infrastructure and Industrial Automation",
+      "Digital Twins and Cyber-Physical Integration",
+      "Autonomous Robotics and Manipulation",
+      "Human-Robot Interaction and Collaborative Systems",
+      "Swarm Systems and Multi-Agent Coordination"
+    ]
+  },
+  {
+    id: "06",
+    icon: <Dna size={48} />,
+    title: "Bioinformatics and Computational Biology",
+    color: "#ff4d4d",
+    topics: [
+      "Computational Genomics and Molecular Biology",
+      "Structural Biology and Drug Discovery",
+      "Systems Biology and Multi-Omics",
+      "Neuroinformatics and Brain-Computer Interfaces",
+      "Precision Medicine and Digital Health",
+      "Biomedical Data Management and Clinical Informatics"
+    ]
+  },
+  {
+    id: "07",
+    icon: <Orbit size={48} />,
+    title: "Astroinformatics and Space Systems",
+    color: "#00ffff",
+    topics: [
+      "Computational Astrophysics and Simulations",
+      "Machine Learning for Astronomical Surveys",
+      "Space Mission Systems and Ground Operations",
+      "Exoplanet and Planetary Science",
+      "Autonomous Space Vehicles and Navigation",
+      "Satellite Networks and Space Communication"
+    ]
+  },
+  {
+    id: "08",
+    icon: <Leaf size={48} />,
+    title: "Sustainability and Green Computing",
+    color: "#39ff14",
+    topics: [
+      "Energy-Efficient Algorithms and Systems",
+      "Green Data Centres and Sustainable Infrastructure",
+      "Climate and Environmental Modelling",
+      "Low-Power and Sustainable Networking",
+      "Circular Computing and E-Waste Reduction",
+      "Computational Methods for Environmental Monitoring"
     ]
   }
 ];
@@ -71,7 +132,7 @@ const Tracks = () => {
               CONFERENCE <span className="gradient-text">TRACKS</span>
             </h2>
             <p className="section-intro-alt">
-              Original research contributions are invited in these five focal areas.
+              Original research contributions are invited in these eight focal areas.
             </p>
           </motion.div>
         </div>
@@ -105,7 +166,7 @@ const Tracks = () => {
                   </div>
                 ))}
               </div>
-              
+
               <div className="track-hover-bg" style={{ background: track.color }}></div>
             </motion.div>
           ))}
@@ -197,16 +258,17 @@ const Tracks = () => {
 
         .track-expertise {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 1.5rem;
           z-index: 2;
         }
 
         .expertise-item {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           gap: 1rem;
-          font-size: 0.9rem;
+          font-size: 0.95rem;
+          line-height: 1.4;
           font-weight: 600;
           color: var(--text-secondary);
         }
@@ -233,7 +295,6 @@ const Tracks = () => {
 
         @media (max-width: 1200px) {
           .track-strip { grid-template-columns: 1fr; gap: 3rem; padding: 3rem; }
-          .track-expertise { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {

@@ -4,21 +4,21 @@ import { Calendar, Timer, Bell, CheckCircle } from 'lucide-react';
 
 const dates = [
   {
-    date: "MARCH 15, 2026",
+    date: "APRIL 05, 2026",
     title: "Submission Deadline",
     desc: "Last call for full paper submissions for review.",
     accent: "var(--neon-pink)",
     icon: <Timer size={24} />
   },
   {
-    date: "Within 24 Hours",
+    date: "APRIL 09, 2026",
     title: "Selection Intimation",
-    desc: "Lightning-fast notification of paper acceptance status.",
+    desc: "Notification of paper acceptance status.",
     accent: "var(--neon-blue)",
     icon: <Bell size={24} />
   },
   {
-    date: "APRIL 05, 2026",
+    date: "APRIL 11, 2026",
     title: "Registration Closing",
     desc: "Final window to secure your spot for the conference.",
     accent: "var(--neon-purple)",
@@ -71,13 +71,13 @@ const Timeline = () => {
                   </div>
                   <div className="date-line"></div>
                 </div>
-                
+
                 <div className="date-content">
                   <div className="date-stamp" style={{ color: item.accent }}>{item.date}</div>
                   <h3>{item.title}</h3>
                   <p>{item.desc}</p>
                 </div>
-                
+
                 {item.glow && <div className="card-glow" style={{ background: item.accent }}></div>}
               </motion.div>
             ))}

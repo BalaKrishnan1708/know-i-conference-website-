@@ -11,7 +11,7 @@ const Hero = () => {
       </div>
 
       <div className="container hero-inner">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -22,9 +22,9 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-           initial={{ opacity: 0, y: 40 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <h1 className="hero-main-title">
             <span className="title-top">GLOBAL SUMMIT ON</span>
@@ -32,16 +32,16 @@ const Hero = () => {
           </h1>
         </motion.div>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="hero-tagline"
         >
-          2nd International Conference on Innovative Computing Research & Cutting Edge Technologies in Computer Science
+          2nd International Conference on Innovative Computing, Research and Cutting Edge Technologies in Computer Science and Engineering
         </motion.p>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -58,7 +58,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
@@ -69,8 +69,8 @@ const Hero = () => {
             <div className="logo-item">SVCE</div>
             <div className="logo-item">AIMST</div>
             <div className="logo-item know-i">
-               <Brain size={20} className="text-[#ff0080]" />
-               KNOW-I
+              <Brain size={20} className="text-[#ff0080]" />
+              KNOW-I
             </div>
           </div>
         </motion.div>
@@ -239,6 +239,9 @@ const Hero = () => {
         }
 
         @media (max-width: 768px) {
+          .title-focus { font-size: 4.5rem; letter-spacing: -2px; }
+          .hero-badge { font-size: 0.7rem; padding: 0.5rem 1.2rem; margin-bottom: 2rem; }
+          .hero-tagline { margin-bottom: 3rem; }
           .hero-actions {
             flex-direction: column;
             gap: 2rem;
@@ -246,13 +249,18 @@ const Hero = () => {
           .partner-strip {
             flex-direction: column;
             gap: 1.5rem;
-            padding: 2rem;
+            padding: 2.5rem 1.5rem;
           }
           .logos-wrap {
             gap: 2rem;
             flex-wrap: wrap;
             justify-content: center;
           }
+        }
+
+        @media (max-width: 480px) {
+          .title-focus { font-size: 3.5rem; }
+          .hero-main-title { margin-bottom: 1.5rem; }
         }
       `}</style>
     </section>

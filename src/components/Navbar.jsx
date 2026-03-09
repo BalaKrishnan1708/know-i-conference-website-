@@ -25,10 +25,7 @@ const Navbar = () => {
     <nav className={`fixed-nav ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link to="hero" smooth={true} className="logo">
-          <div className="logo-cube">
-            <Globe className="text-white" size={24} />
-          </div>
-          <span className="logo-text">ICICRCET<span className="dot">.</span>'26</span>
+          <img src="/logo.png" alt="ICICRCET'26 Logo" className="logo-img" />
         </Link>
 
         {/* Desktop Links */}
@@ -118,31 +115,17 @@ const Navbar = () => {
         .logo {
           display: flex;
           align-items: center;
-          gap: 1rem;
           cursor: pointer;
         }
 
-        .logo-cube {
-          width: 45px;
-          height: 45px;
-          background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
-          border-radius: 12px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 10px 20px rgba(255, 0, 128, 0.3);
+        .logo-img {
+          height: 50px;
+          width: auto;
+          object-fit: contain;
         }
 
-        .logo-text {
-          font-family: var(--font-heading);
-          font-weight: 800;
-          font-size: 1.5rem;
-          letter-spacing: -2px;
-          color: white;
-        }
-
-        .logo-text .dot {
-          color: var(--neon-pink);
+        @media (max-width: 768px) {
+          .logo-img { height: 40px; }
         }
 
         .nav-desktop {
