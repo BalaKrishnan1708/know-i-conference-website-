@@ -27,7 +27,6 @@ const Hero = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <h1 className="hero-main-title">
-            <span className="title-top">GLOBAL CONFERENCE ON</span>
             <span className="gradient-text title-focus">ICICRCET'26</span>
           </h1>
         </motion.div>
@@ -58,12 +57,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="partner-strip glass-panel"
-        >
+        <div className="partner-strip glass-panel">
           <div className="partner-label">PRESENTED BY</div>
           <div className="logos-wrap">
             <img src="/logo1.png" alt="SVCE Logo" className="partner-logo-img" />
@@ -73,7 +67,7 @@ const Hero = () => {
               KNOW-I
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       <style jsx>{`
@@ -237,15 +231,7 @@ const Hero = () => {
         .partner-logo-img {
           height: 45px;
           width: auto;
-          filter: brightness(0) invert(1);
-          opacity: 0.8;
-          transition: all 0.3s ease;
-        }
-
-        .partner-logo-img:hover {
           opacity: 1;
-          filter: none;
-          transform: scale(1.05);
         }
 
         .know-i {

@@ -4,22 +4,22 @@ import { Linkedin, Github, Globe, User, ShieldCheck, Mail } from 'lucide-react';
 
 const committee = {
   chiefPatrons: [
-    { name: "DR. A. C. MUTHIAH", role: "CHAIRMAN, GOVERNING COUNCIL", org: "SVCE", color: "var(--neon-pink)", initials: "AM" },
-    { name: "SHRI. ASHWIN C. MUTHIAH", role: "CHAIRMAN, SPIC LTD / VICE CHAIRMAN, GOVERNING COUNCIL", org: "SVCE", color: "var(--neon-blue)", initials: "ACM" },
-    { name: "DR. M. SIVANANDHAM", role: "SECRETARY", org: "SVEHT", color: "var(--neon-purple)", initials: "MS" }
+    { name: "DR. A. C. MUTHIAH", role: "CHAIRMAN, GOVERNING COUNCIL", org: "SVCE", color: "var(--neon-pink)", initials: "AM", image: "/staffs/a c muthaiah.png" },
+    { name: "SHRI. ASHWIN C. MUTHIAH", role: "CHAIRMAN, SPIC LTD / VICE CHAIRMAN, GOVERNING COUNCIL", org: "SVCE", color: "var(--neon-blue)", initials: "ACM", image: "/staffs/ASHWIN C. MUTHIAH.png" },
+    { name: "DR. M. SIVANANDHAM", role: "SECRETARY", org: "SVEHT", color: "var(--neon-purple)", initials: "MS", image: "/staffs/sivanandham.png" }
   ],
   patron: [
-    { name: "PROF. DR. E.N. GANESH", role: "PRINCIPAL", org: "SVCE", color: "var(--neon-purple)", initials: "EG" }
+    { name: "PROF. DR. E.N. GANESH", role: "PRINCIPAL", org: "SVCE", color: "var(--neon-purple)", initials: "EG", image: "/staffs/E.N. GANESH.png" }
   ],
   convenors: [
-    { name: "DR. R. ANITHA", role: "HOD / CSE", org: "SVCE", color: "var(--neon-lime)", initials: "RA" },
-    { name: "DR. N. RAJGANESH", role: "AHOD / CSE", org: "SVCE", color: "#ff8c00", initials: "NR" }
+    { name: "DR. R. ANITHA", role: "HOD / CSE", org: "SVCE", color: "var(--neon-lime)", initials: "RA", image: "/staffs/Anitha.png" },
+    { name: "DR. N. RAJGANESH", role: "AHOD / CSE", org: "SVCE", color: "#ff8c00", initials: "NR", image: "/staffs/Rajganesh.png" }
   ],
   coordinators: [
-    { name: "MS. R. K. KAPILA VANI", role: "ASST. PROFESSOR", org: "SVCE", color: "var(--neon-blue)", initials: "KV" },
-    { name: "MR. P. SELVAMANI", role: "ASST. PROFESSOR", org: "SVCE", color: "var(--neon-pink)", initials: "PS" },
-    { name: "MS. V. RADHA", role: "ASST. PROFESSOR", org: "SVCE", color: "var(--neon-purple)", initials: "VR" },
-    { name: "MR. V. KRISHNAMOORTHY", role: "ASST. PROFESSOR", org: "SVCE", color: "var(--neon-lime)", initials: "VK" }
+    { name: "MS. R. K. KAPILA VANI", role: "ASST. PROFESSOR", org: "SVCE", color: "var(--neon-blue)", initials: "KV", image: "/staffs/Kapila Vani.png" },
+    { name: "MR. P. SELVAMANI", role: "ASST. PROFESSOR", org: "SVCE", color: "var(--neon-pink)", initials: "PS", image: "/staffs/Selvamani.png" },
+    { name: "MS. V. RADHA", role: "ASST. PROFESSOR", org: "SVCE", color: "var(--neon-purple)", initials: "VR", image: "/staffs/radha.webp" },
+    { name: "MR. V. KRISHNAMOORTHY", role: "ASST. PROFESSOR", org: "SVCE", color: "var(--neon-lime)", initials: "VK", image: "/staffs/Krishnamoorthy.png" }
   ]
 };
 
@@ -33,9 +33,15 @@ const MemberCard = ({ member }) => (
   >
     <div className="member-visual">
       <div className="avatar-frame">
-        <div className="avatar-initials" style={{ background: `linear-gradient(135deg, ${member.color}, #000)` }}>
-          {member.initials}
-        </div>
+        {member.image ? (
+          <div className="avatar-image-container">
+            <img src={member.image} alt={member.name} className="member-photo" />
+          </div>
+        ) : (
+          <div className="avatar-initials" style={{ background: `linear-gradient(135deg, ${member.color}, #000)` }}>
+            {member.initials}
+          </div>
+        )}
         <div className="avatar-ring" style={{ borderColor: member.color }}></div>
         <div className="verified-badge"><ShieldCheck size={12} /></div>
       </div>
@@ -218,6 +224,28 @@ const Committee = () => {
           color: white;
           position: relative;
           z-index: 2;
+        }
+
+        .avatar-image-container {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          overflow: hidden;
+          position: relative;
+          z-index: 2;
+          background: #111;
+        }
+
+        .member-photo {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+          transition: transform 0.5s ease;
+        }
+
+        .member-card:hover .member-photo {
+          transform: scale(1.1);
         }
 
         .avatar-ring {

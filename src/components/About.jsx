@@ -37,7 +37,7 @@ const About = () => {
             >
               <h4 className="vibrant-label">ESTABLISHED INNOVATION</h4>
               <h2 className="title-huge">
-                DISCOVER THE <span className="gradient-text">CONFERENCE</span>
+                ABOUT THE <span className="gradient-text">CONFERENCE</span>
               </h2>
             </motion.div>
 
