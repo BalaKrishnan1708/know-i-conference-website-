@@ -26,7 +26,7 @@ const dates = [
   },
   {
     date: "APRIL 16, 2026",
-    title: "Summit Genesis",
+    title: "Conference Genesis",
     desc: "The main event begins Online (Virtual Mode).",
     accent: "var(--neon-lime)",
     icon: <Calendar size={24} />,

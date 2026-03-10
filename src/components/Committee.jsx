@@ -5,7 +5,8 @@ import { Linkedin, Github, Globe, User, ShieldCheck, Mail } from 'lucide-react';
 const committee = {
   chiefPatrons: [
     { name: "DR. A. C. MUTHIAH", role: "CHAIRMAN, GOVERNING COUNCIL", org: "SVCE", color: "var(--neon-pink)", initials: "AM" },
-    { name: "DR. M. SIVANANDHAM", role: "SECRETARY", org: "SVEHT", color: "var(--neon-blue)", initials: "MS" }
+    { name: "SHRI. ASHWIN C. MUTHIAH", role: "CHAIRMAN, SPIC LTD / VICE CHAIRMAN, GOVERNING COUNCIL", org: "SVCE", color: "var(--neon-blue)", initials: "ACM" },
+    { name: "DR. M. SIVANANDHAM", role: "SECRETARY", org: "SVEHT", color: "var(--neon-purple)", initials: "MS" }
   ],
   patron: [
     { name: "PROF. DR. E.N. GANESH", role: "PRINCIPAL", org: "SVCE", color: "var(--neon-purple)", initials: "EG" }
@@ -86,7 +87,7 @@ const Committee = () => {
           {/* Chief Patrons */}
           <div className="hierarchy-row">
             <div className="row-label">CHIEF PATRONS</div>
-            <div className="members-grid dual">
+            <div className="members-grid triple">
               {committee.chiefPatrons.map((m, i) => <MemberCard key={i} member={m} />)}
             </div>
           </div>
@@ -169,6 +170,7 @@ const Committee = () => {
         }
 
         .dual { grid-template-columns: repeat(2, 1fr); max-width: 1000px; }
+        .triple { grid-template-columns: repeat(3, 1fr); max-width: 1200px; }
         .single { grid-template-columns: 1fr; max-width: 500px; }
         .quad { grid-template-columns: repeat(2, 1fr); }
 
@@ -323,7 +325,7 @@ const Committee = () => {
         }
 
         @media (max-width: 968px) {
-          .dual, .quad { grid-template-columns: 1fr 1fr; }
+          .dual, .quad, .triple { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 600px) {

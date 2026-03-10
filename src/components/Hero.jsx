@@ -18,7 +18,7 @@ const Hero = () => {
           className="hero-badge"
         >
           <Sparkles size={16} className="text-yellow-400" />
-          <span>APRIL 16, 2026 • VIRTUAL SUMMIT</span>
+          <span>APRIL 16, 2026 • VIRTUAL CONFERENCE</span>
         </motion.div>
 
         <motion.div
@@ -27,7 +27,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <h1 className="hero-main-title">
-            <span className="title-top">GLOBAL SUMMIT ON</span>
+            <span className="title-top">GLOBAL CONFERENCE ON</span>
             <span className="gradient-text title-focus">ICICRCET'26</span>
           </h1>
         </motion.div>
@@ -66,8 +66,8 @@ const Hero = () => {
         >
           <div className="partner-label">PRESENTED BY</div>
           <div className="logos-wrap">
-            <div className="logo-item">SVCE</div>
-            <div className="logo-item">AIMST</div>
+            <img src="/logo1.png" alt="SVCE Logo" className="partner-logo-img" />
+            <img src="/logo2.png" alt="Partner Logo" className="partner-logo-img" />
             <div className="logo-item know-i">
               <Brain size={20} className="text-[#ff0080]" />
               KNOW-I
@@ -232,6 +232,20 @@ const Hero = () => {
           font-family: var(--font-heading);
           font-weight: 800;
           font-size: 1.2rem;
+        }
+
+        .partner-logo-img {
+          height: 45px;
+          width: auto;
+          filter: brightness(0) invert(1);
+          opacity: 0.8;
+          transition: all 0.3s ease;
+        }
+
+        .partner-logo-img:hover {
+          opacity: 1;
+          filter: none;
+          transform: scale(1.05);
         }
 
         .know-i {

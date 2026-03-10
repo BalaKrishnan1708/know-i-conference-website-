@@ -18,7 +18,7 @@ const About = () => {
     },
     department: {
       title: "ABOUT THE DEPARTMENT",
-      text: "The Department of Computer Science and Engineering, established in 1985, has earned distinguished national and international recognition through the collective efforts of its dedicated faculty, committed support staff, and talented students. The department is equipped with state-of-the-art computing infrastructure and a team of highly qualified faculty specializing in cutting-edge domains such as Artificial Intelligence, Cloud Computing and Data Analytics. The department fosters a vibrant culture of research and innovation, actively organizing national and international conferences, hackathons workshops, technical seminars, and symposia. Through strong global academic collaborations and industry partnerships, it ensures students are exposed to a truly international learning experience. The department proudly offers B.E. in Computer Science and Engineering, B.Tech. in Artificial Intelligence and Data Science, M.E. in Computer Science and Engineering, and Ph.D. programs - all committed to shaping technically excellent, ethically grounded, and socially responsible engineers for a rapidly evolving world.",
+      text: "The Department of Computer Science and Engineering, established in 1985, has earned distinguished national and international recognition through the collective efforts of its dedicated faculty, committed support staff, and talented students. The department is equipped with state-of-the-art computing infrastructure and a team of highly qualified faculty specializing in cutting-edge domains such as Artificial Intelligence, Cloud Computing and Data Analytics.\n\nThe department fosters a vibrant culture of research and innovation, actively organizing national and international conferences, workshops, technical seminars, and symposia. Through strong global academic collaborations and industry partnerships, it ensures students are exposed to a truly international learning experience. The department takes pride in a distinguished alumni network, including Padma Shri Prof. V. Kamakoti, Director of IIT Madras — a reflection of its enduring tradition of nurturing exceptional talent.\n\nThe department proudly offers B.E. in Computer Science and Engineering, B.Tech. in Artificial Intelligence and Data Science, M.E. in Computer Science and Engineering, and Ph.D. programs - all committed to shaping technically excellent, ethically grounded, and socially responsible engineers for a rapidly evolving world.",
       icon: <Users size={24} />
     }
   };
@@ -37,7 +37,7 @@ const About = () => {
             >
               <h4 className="vibrant-label">ESTABLISHED INNOVATION</h4>
               <h2 className="title-huge">
-                DISCOVER THE <span className="gradient-text">SUMMIT</span>
+                DISCOVER THE <span className="gradient-text">CONFERENCE</span>
               </h2>
             </motion.div>
 

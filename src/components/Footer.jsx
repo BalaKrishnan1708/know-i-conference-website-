@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="footer-info-rack">
             <div className="info-col">
               <h5>NAVIGATION</h5>
-              <Link to="about" smooth={true}>About Summit</Link>
+              <Link to="about" smooth={true}>About Conference</Link>
               <Link to="tracks" smooth={true}>Innovation Tracks</Link>
               <Link to="dates" smooth={true}>Deadlines</Link>
               <Link to="committee" smooth={true}>Leadership</Link>
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom-bar">
-          <p>© 2026 ICICRCET SUMMIT. ALL RIGHTS RESERVED.</p>
+          <p>© 2026 ICICRCET CONFERENCE. ALL RIGHTS RESERVED.</p>
           <div className="svce-tag">
             <Server size={14} />
             <span>POWERED BY DEPT. OF CSE, SVCE</span>
