@@ -24,27 +24,33 @@ const Navbar = () => {
   return (
     <nav className={`fixed-nav ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <Link to="hero" smooth={true} className="logo">
-          <img src="/logo.png" alt="ICICRCET'26 Logo" className="logo-img" />
-        </Link>
 
-        {/* Desktop Links */}
+
+
+        {/* Desktop Links & Partner Logos */}
         <div className="nav-desktop">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              smooth={true}
-              duration={800}
-              offset={-100}
-              className="nav-link"
-              activeClass="active"
-              spy={true}
-            >
-              {link.name}
-              <div className="underline"></div>
-            </Link>
-          ))}
+          <div className="nav-partner-logos">
+            <img src="/logo1.png" alt="SVCE" className="nav-logo-partner" />
+            <img src="/logo2.png" alt="AMIST" className="nav-logo-partner" />
+            <img src="/logo.png" alt="ICICRCET" className="nav-logo-partner" />
+          </div>
+          <div className="nav-links-wrap">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                smooth={true}
+                duration={800}
+                offset={-100}
+                className="nav-link"
+                activeClass="active"
+                spy={true}
+              >
+                {link.name}
+                <div className="underline"></div>
+              </Link>
+            ))}
+          </div>
           <button className="btn-modern btn-primary nav-btn">
             REGISTER NOW
           </button>
@@ -112,26 +118,52 @@ const Navbar = () => {
           align-items: center;
         }
 
-        .logo {
+        .brand-text {
+          cursor: pointer;
           display: flex;
           align-items: center;
-          cursor: pointer;
+          text-decoration: none;
         }
 
-        .logo-img {
-          height: 50px;
-          width: auto;
-          object-fit: contain;
+        .brand-text .gradient-text {
+          font-size: 1.5rem;
+          font-weight: 900;
+          letter-spacing: -1px;
         }
 
         @media (max-width: 768px) {
-          .logo-img { height: 40px; }
+          .brand-text .gradient-text { font-size: 1.2rem; }
         }
 
         .nav-desktop {
           display: flex;
           align-items: center;
-          gap: 2.5rem;
+          gap: 3rem;
+        }
+
+        .nav-partner-logos {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          padding-right: 2rem;
+          border-right: 1px solid var(--glass-border);
+        }
+
+        .nav-logo-partner {
+          height: 40px;
+          width: auto;
+          filter: brightness(1.2);
+          transition: transform 0.3s ease;
+        }
+
+        .nav-logo-partner:hover {
+          transform: scale(1.1);
+        }
+
+        .nav-links-wrap {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
         }
 
         @media (max-width: 1024px) {

@@ -18,7 +18,7 @@ const Hero = () => {
           className="hero-badge"
         >
           <Sparkles size={16} className="text-yellow-400" />
-          <span>APRIL 16, 2026 • VIRTUAL CONFERENCE</span>
+          <span>APRIL 16, 2026 • VIRTUAL MODE</span>
         </motion.div>
 
         <motion.div
@@ -57,17 +57,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <div className="partner-strip glass-panel">
-          <div className="partner-label">PRESENTED BY</div>
-          <div className="logos-wrap">
-            <img src="/logo1.png" alt="SVCE Logo" className="partner-logo-img" />
-            <img src="/logo2.png" alt="Partner Logo" className="partner-logo-img" />
-            <div className="logo-item know-i">
-              <Brain size={20} className="text-[#ff0080]" />
-              KNOW-I
-            </div>
-          </div>
-        </div>
+
       </div>
 
       <style jsx>{`
