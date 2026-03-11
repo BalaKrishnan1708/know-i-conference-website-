@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, Brain } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -24,16 +24,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed-nav ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-
-
-
-        {/* Desktop Links & Partner Logos */}
         <div className="nav-desktop">
-          <div className="nav-partner-logos">
-            <img src="/logo1.png" alt="SVCE" className="nav-logo-partner" />
-            <img src="/logo2.png" alt="AMIST" className="nav-logo-partner" />
-            <img src="/logo.png" alt="ICICRCET" className="nav-logo-partner" />
-          </div>
           <div className="nav-links-wrap">
             {navLinks.map((link) => (
               <Link
@@ -51,6 +42,16 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+
+          <div className="nav-partner-logos">
+            <img src="/logo1.png" alt="SVCE" className="nav-logo-partner" />
+            <img src="/logo2.png" alt="AMIST" className="nav-logo-partner" />
+            <Link to="hero" smooth={true} duration={800} className="nav-logo-item know-i">
+              <Brain size={28} className="text-[#ff0080]" />
+              <span className="know-i-text">KNOW-I</span>
+            </Link>
+          </div>
+
           <button className="btn-modern btn-primary nav-btn">
             REGISTER NOW
           </button>
@@ -118,22 +119,7 @@ const Navbar = () => {
           align-items: center;
         }
 
-        .brand-text {
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          text-decoration: none;
-        }
 
-        .brand-text .gradient-text {
-          font-size: 1.5rem;
-          font-weight: 900;
-          letter-spacing: -1px;
-        }
-
-        @media (max-width: 768px) {
-          .brand-text .gradient-text { font-size: 1.2rem; }
-        }
 
         .nav-desktop {
           display: flex;
@@ -144,20 +130,33 @@ const Navbar = () => {
         .nav-partner-logos {
           display: flex;
           align-items: center;
-          gap: 1.5rem;
-          padding-right: 2rem;
-          border-right: 1px solid var(--glass-border);
+          gap: 2.5rem;
+          margin: 0 2rem;
         }
 
         .nav-logo-partner {
-          height: 40px;
+          height: 60px;
           width: auto;
-          filter: brightness(1.2);
+          filter: none;
           transition: transform 0.3s ease;
         }
 
-        .nav-logo-partner:hover {
-          transform: scale(1.1);
+        .nav-logo-item.know-i {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: white;
+          font-weight: 800;
+          font-family: var(--font-heading);
+          font-size: 1.1rem;
+        }
+
+        .know-i-text {
+          letter-spacing: 1px;
+        }
+
+        .nav-logo-partner:hover, .nav-logo-item:hover {
+          transform: scale(1.05);
         }
 
         .nav-links-wrap {

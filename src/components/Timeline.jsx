@@ -26,7 +26,7 @@ const dates = [
   },
   {
     date: "APRIL 16, 2026",
-    title: "Conference Genesis",
+    title: "Conference",
     desc: "VIRTUAL MODE",
     accent: "var(--neon-lime)",
     icon: <Calendar size={24} />,
@@ -48,9 +48,7 @@ const Timeline = () => {
               <h2 className="title-vertical">
                 KEY <span className="gradient-text">DATES</span>
               </h2>
-              <p className="timeline-subtitle">
-                Mark your calendars for clinical precision in project delivery.
-              </p>
+
             </motion.div>
           </div>
 

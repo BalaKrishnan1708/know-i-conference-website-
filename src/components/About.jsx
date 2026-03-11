@@ -12,7 +12,7 @@ const About = () => {
       icon: <School size={24} />
     },
     conference: {
-      title: "ABOUT US",
+      title: "ABOUT CONFERENCE",
       text: "The 2nd International Conference on Innovative Computing, Research and Cutting Edge Technologies in Computer Science and Engineering (ICICRCET'26) is an annual event that brings together researchers, scholars, and industry experts in Computer Science and Engineering. Organized by Sri Venkateswara College of Engineering in association with AIMST University, the conference provides a platform for presenting innovative research, fostering industry-academia collaboration, and enhancing skill development among students and faculty. What began as a national conference has since scaled into a prestigious international platform, the conference is spearheaded by Know-I - the department's AI/ML research club - reflecting the department's growing commitment to global academic outreach and research excellence.",
       icon: <Presentation size={24} />
     },
@@ -37,7 +37,7 @@ const About = () => {
             >
               <h4 className="vibrant-label">ESTABLISHED INNOVATION</h4>
               <h2 className="title-huge">
-                ABOUT <span className="gradient-text">US</span>
+                ABOUT THE <span className="gradient-text">CONFERENCE</span>
               </h2>
             </motion.div>
 

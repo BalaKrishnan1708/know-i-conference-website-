@@ -45,7 +45,7 @@ const Contact = () => {
             >
               <div className="channel-icon bg-blue"><Phone size={30} /></div>
               <div className="channel-info">
-                <h4>HOTLINE</h4>
+                <h4>CONTACT</h4>
                 <p>+91 9941112928</p>
                 <a href="tel:+919941112928" className="channel-link">CALL NOW <ExternalLink size={14} /></a>
               </div>
